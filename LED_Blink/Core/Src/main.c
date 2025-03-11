@@ -119,15 +119,15 @@ int main(void)
 
   while (1)
   {
-    /* USER CODE END WHILE */
-   now = HAL_GetTick();
-
-   if (now - last_print >= 1000) {
-       printf("Лупинк %lu\n", now);
-       last_print = now;
-   }
-    /* USER CODE BEGIN 3 */
+    now = HAL_GetTick();
+    if (now - last_print >= 1000) {
+      printf("Лупинг%lu\n", now);
+      last_print = now;
+     }
   }
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
@@ -279,7 +279,7 @@ static void MX_GPIO_Init(void)
 
   /*Configure GPIO pin : LED_Pin */
   GPIO_InitStruct.Pin = LED_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LED_GPIO_Port, &GPIO_InitStruct);

@@ -508,25 +508,23 @@ int main(void)
 
   while (1)
   {
-    /* USER CODE END WHILE */
-   now = HAL_GetTick();
+    now = HAL_GetTick();
  8000614:	f000 fbc0 	bl	8000d98 <HAL_GetTick>
  8000618:	6038      	str	r0, [r7, #0]
-
-   if (now - last_print >= 1000) {
+    if (now - last_print >= 1000) {
  800061a:	683a      	ldr	r2, [r7, #0]
  800061c:	687b      	ldr	r3, [r7, #4]
  800061e:	1ad3      	subs	r3, r2, r3
  8000620:	f5b3 7f7a 	cmp.w	r3, #1000	@ 0x3e8
  8000624:	d3f6      	bcc.n	8000614 <main+0x28>
-       printf("Лупинк %lu\n", now);
+      printf("Лупинг%lu\n", now);
  8000626:	6839      	ldr	r1, [r7, #0]
  8000628:	4803      	ldr	r0, [pc, #12]	@ (8000638 <main+0x4c>)
  800062a:	f002 fded 	bl	8003208 <iprintf>
-       last_print = now;
+      last_print = now;
  800062e:	683b      	ldr	r3, [r7, #0]
  8000630:	607b      	str	r3, [r7, #4]
-   now = HAL_GetTick();
+    now = HAL_GetTick();
  8000632:	e7ef      	b.n	8000614 <main+0x28>
  8000634:	08003fb8 	.word	0x08003fb8
  8000638:	08003fd4 	.word	0x08003fd4
@@ -946,8 +944,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pin = LED_Pin;
  80008b6:	2301      	movs	r3, #1
  80008b8:	61fb      	str	r3, [r7, #28]
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
- 80008ba:	2311      	movs	r3, #17
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+ 80008ba:	2301      	movs	r3, #1
  80008bc:	623b      	str	r3, [r7, #32]
   GPIO_InitStruct.Pull = GPIO_NOPULL;
  80008be:	2300      	movs	r3, #0
