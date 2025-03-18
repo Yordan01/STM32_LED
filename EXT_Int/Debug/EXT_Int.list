@@ -375,7 +375,7 @@ __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 
 0800051c <_write>:
 
-// Send printf to uart1
+// Send printf to uart3
 int _write(int fd, char* ptr, int len) {
  800051c:	b580      	push	{r7, lr}
  800051e:	b086      	sub	sp, #24

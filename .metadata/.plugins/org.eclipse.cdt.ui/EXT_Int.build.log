@@ -1,4 +1,4 @@
-17:20:55 **** Incremental Build of configuration Debug for project EXT_Int ****
+15:51:47 **** Build of configuration Debug for project EXT_Int ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F412Zx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "EXT_Int.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Appl\personal_ws\GitHub\STM32_LED\EXT_Int\STM32F412ZGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EXT_Int.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -13,5 +13,5 @@ Finished building: default.size.stdout
 Finished building: EXT_Int.list
  
 
-17:20:56 Build Finished. 0 errors, 0 warnings. (took 1s.30ms)
+15:51:48 Build Finished. 0 errors, 0 warnings. (took 1s.492ms)
 

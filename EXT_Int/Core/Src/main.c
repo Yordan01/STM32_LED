@@ -78,7 +78,7 @@ __weak void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 	}
 }
 
-// Send printf to uart1
+// Send printf to uart3
 int _write(int fd, char* ptr, int len) {
   HAL_StatusTypeDef hstatus;
 
